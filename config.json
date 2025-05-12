@@ -1,14 +1,27 @@
 {
     "links": [
-        "https://www.ss.lv/lv/transport/cars/alfa-romeo/",
+        "https://www.ss.lv/lv/transport/cars/ford/",
         "https://www.ss.lv/lv/transport/cars/audi/",
         "https://www.ss.lv/lv/transport/cars/bmw/", 
-        "https://www.ss.lv/lv/transport/cars/chevrolet/",
-        "https://www.ss.lv/lv/transport/cars/chrysler/"
+        "https://www.ss.lv/lv/transport/cars/opel/",
+        "https://www.ss.lv/lv/transport/cars/volvo/",
+        "https://www.ss.lv/lv/transport/cars/volkswagen/",
+        "https://www.ss.lv/lv/transport/cars/toyota/"
+
     ],
     "filters": {
         "pages_max": -1,
         "price_min": -1,
-        "price_max": -1
+        "price_max": -1,
+        "engine": "",
+        "year": -1,
+        "mileage_max": -1
+    },
+    "excel_file_name": "ss_autotest.xlsx",
+    "scan_interval": 3600,
+    "discord": {
+        "enabled": true,
+        "token": "",
+        "channel_id": 1051528494586286154
     }
 }
