@@ -47,7 +47,35 @@ Konfigurācija
 
 Pirms programmas palaišanas nepieciešams **rediģēt config.json failu**:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   jsonCopyEdit{    "links": [      "https://www.ss.lv/lv/transport/cars/ford",      "https://www.ss.lv/lv/transport/cars/audi"    ],    "filters": {      "price_max": -1,      "price_min": -1,      "engine": "",      "year": -1,      "mileage_max": -1    },    "pages_max": -1,    "excel_file_name": "ss_autotest.xlsx",    "scan_interval": 3600,    "discord": {      "enabled": false,      "token": "DISCORD_BOT_TOKEN",      "channel_id": 1051528494586286154    }  }   `
+```json
+{
+    "links": [
+        "https://www.ss.lv/lv/transport/cars/ford/",
+        "https://www.ss.lv/lv/transport/cars/audi/",
+        "https://www.ss.lv/lv/transport/cars/bmw/", 
+        "https://www.ss.lv/lv/transport/cars/opel/",
+        "https://www.ss.lv/lv/transport/cars/volvo/",
+        "https://www.ss.lv/lv/transport/cars/volkswagen/",
+        "https://www.ss.lv/lv/transport/cars/toyota/"
+
+    ],
+    "filters": {
+        "pages_max": -1,
+        "price_min": -1,
+        "price_max": -1,
+        "engine": "",
+        "year": -1,
+        "mileage_max": -1
+    },
+    "excel_file_name": "ss_autotest.xlsx",
+    "scan_interval": 3600,
+    "discord": {
+        "enabled": true,
+        "token": "YOUR_DISCORD_BOT_TOKEN",
+        "channel_id": 1051528494586286154
+    }
+}
+```
 
 ### Parametru skaidrojums
 
@@ -80,3 +108,7 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
     *   token: Discord bota token (jātur **privāti**!)
         
     *   channel\_id: Discord kanāla ID, kurā tiks sūtīti ziņojumi
+
+Programma darbībā
+-----------------
+[![SS.lv Web Scraping Showcase](https://img.youtube.com/vi/0cD082Z4M0g/0.jpg)](https://www.youtube.com/watch?v=0cD082Z4M0g)
