@@ -3,7 +3,6 @@ import json
 import time
 import random
 import threading
-import asyncio
 import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -18,6 +17,7 @@ addresses = config.get('links', [])
 filters = config.get('filters', {})
 excel_file = config.get('excel_file_name', 'ss_auto.xlsx')
 discord_enabled = config.get('discord', {}).get('enabled', False)
+
 
 if discord_enabled:
     from modules.discord_bot import message_send, start_bot, client
@@ -47,13 +47,15 @@ if mileage_filter == -1:
     mileage_filter = float('inf')
 scan_interval = config.get('scan_interval', 3600)
 
+
+#Programmas sākums
 while True:
     data_now = {}
     data_updated = {}
     try:
         data_now = pd.read_excel(excel_file, sheet_name=None, engine='openpyxl')
     except Exception as e:
-        print(f"Error loading data: {e}")
+        print(f"Error loading data: {e}, file might not exist.") #Kļūda ja fails netiek atrasts
         
     ids = set()
     for address in addresses:
@@ -171,4 +173,5 @@ while True:
         for sheet, df in data_updated.items():
             df.to_excel(writer, sheet_name=sheet, index=False)
         print("Data saved to " + excel_file)
+    print(f"Next scan in {scan_interval} secounds")
     time.sleep(scan_interval) #gaida nākamo pārskatīšanu
