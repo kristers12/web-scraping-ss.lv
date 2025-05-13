@@ -27,6 +27,8 @@ Izmantotās bibliotēkas
 *   bs4 (BeautifulSoup) – HTML koda apstrādei
     
 *   pandas – Excel failu veidošanai un rediģēšanai
+  
+*   openpyxl - Excel failu lasīšanai, veidošanai un rediģēšanai
     
 *   discord – Discord robota darbībai
     
