@@ -20,8 +20,8 @@
     "excel_file_name": "ss_autotest.xlsx",
     "scan_interval": 3600,
     "discord": {
-        "enabled": true,
-        "token": "",
+        "enabled": false,
+        "token": "YOUR_DISCORD_BOT_TOKEN",
         "channel_id": 1051528494586286154
     }
 }

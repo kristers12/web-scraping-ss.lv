@@ -156,7 +156,7 @@ while True:
             to_add = df_new[~df_new['ID'].astype(str).isin(ids_now)]
             if discord_enabled:
                 if not to_add.empty:
-                    client.loop.create_task(message_send(f"New cars found in {subcategory}: {to_add}"))
+                    client.loop.create_task(message_send(f"New cars found in {subcategory}: \n {to_add.to_string(index=False)}"))
             to_keep = df_exist[df_exist['ID'].astype(str).isin(ids_new)]
 
             df_final = pd.concat([to_keep, to_add], ignore_index=True)
