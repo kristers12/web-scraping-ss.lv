@@ -93,7 +93,7 @@ Pirms programmas palaišanas nepieciešams **rediģēt config.json failu**:
         
     *   year: Auto ražošanas gada minimums (piem., 2015)
         
-    *   mileage\_max: Maksimālais nobraukums kilometros (piem., 200000)
+    *   mileage\_max: Maksimālais nobraukums kilometros (tūkstošos) (piem., 200)
         
     *   Ja kādu filtru nevēlas izmantot (izņemot engine), vērtība jābūt -1
         
