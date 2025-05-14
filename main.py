@@ -150,6 +150,10 @@ while True:
         df_new = pd.DataFrame(carWebScrape.to_data())
         df_exist = data_now.get(subcategory, pd.DataFrame())
 
+        if df_new.empty or 'ID' not in df_new.columns:
+                print(f"No 'ID' column found in {subcategory} data. Skipping.")
+                continue
+
         # izmantojam, lai saglabātu visus datus, ja pat tie vairs nav pieejami mājaslapā, proti, veidojas kā datubāze
         if not df_exist.empty:
             ids_now = set(df_exist['ID'].astype(str))
