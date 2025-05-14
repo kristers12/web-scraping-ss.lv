@@ -150,6 +150,7 @@ while True:
         df_new = pd.DataFrame(carWebScrape.to_data())
         df_exist = data_now.get(subcategory, pd.DataFrame())
 
+        #Check for data frames without a ID
         if df_new.empty or 'ID' not in df_new.columns:
                 print(f"No 'ID' column found in {subcategory} data. Skipping.")
                 continue
